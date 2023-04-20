@@ -1,5 +1,8 @@
 # (WIP) CapGo
-Golang package for easy and fast integration with CapSolver API
+Golang package for easy and fast integration with [CapSolver API](https://capsolver.com/)
+- An API key it's **required**. [**Get here.**](https://dashboard.capsolver.com/passport/register?inviteCode=CHhA_5os)
+- [Documentation](https://docs.capsolver.com/guide/getting-started.html), information on what to write in `task`
+
 ## Supported CAPTCHA types:
 - HCaptcha
 - FunCaptcha
@@ -18,8 +21,6 @@ Golang package for easy and fast integration with CapSolver API
 ```sh
 go get github.com/paradist/capgo
 ```
-
-
 
 ## Usage
 ### Balance
