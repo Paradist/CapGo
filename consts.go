@@ -49,10 +49,11 @@ var (
 )
 
 const (
-	STATUS_READY    = "ready"
-	CREATE_TASK_PATH = "/createTask"
-	GET_TASK_PATH   = "/getTaskResult"
-	BALANCE_PATH     = "/getBalance"
-	TASK_TIMEOUT    = 45
-	API_URL			= "https://api.capsolver.com"
+	STATUS_READY		= "ready"
+	CREATE_TASK_PATH	= "/createTask"
+	TASK_PATH			= "/getTaskResult"
+	BALANCE_PATH		= "/getBalance"
+	TASK_TIMEOUT		= 45
+	API_URL				= "https://api.capsolver.com"
+	APP_ID				= "44937E6C-1F08-4D20-9413-E61F74E8B254"
 )

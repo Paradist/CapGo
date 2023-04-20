@@ -3,7 +3,6 @@ package capGo
 type capGoStruct struct {
 	ApiKey string
 }
-
 type Solution struct {
 	Object             []bool    `json:"objects,omitempty"`
 	Box                []float32 `json:"box,omitempty"`
@@ -39,6 +38,7 @@ type CapSolverRequest struct {
 	ClientKey string          `json:"ClientKey"`
 	Task      *map[string]any `json:"task,omitempty"`
 	TaskId    string          `json:"taskId,omitempty"`
+	AppId    string           `json:"appId,omitempty"`
 }
 type enterPrisePayload struct {
 	S      string `json:"s,omitempty"`

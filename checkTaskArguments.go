@@ -24,7 +24,9 @@ func (c capGoStruct) CheckTaskArguments(args map[string]any) (error) {
 	if strings.Contains(captchaType, "recaptcha") {
 		if captchaType != "recaptchaclassification" {
 			return checkNormalCaptcha(args)
-		} 
+		} else {
+			return nil
+		}
 	}
 	if strings.Contains(captchaType, "hcaptcha") {
 		if captchaType == "hcaptchaclassification" {

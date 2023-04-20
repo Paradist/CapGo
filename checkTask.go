@@ -1,7 +1,7 @@
 package capGo
 
 func (c capGoStruct) CheckTask(taskId string) (bool, error) {
-	resp, err := c.Request(GET_TASK_PATH, &CapSolverRequest{
+	resp, err := c.Request(TASK_PATH, &CapSolverRequest{
 		ClientKey: 	c.ApiKey,
 		TaskId:     taskId,
 	})
