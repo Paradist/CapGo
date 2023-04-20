@@ -1,9 +1,12 @@
 package capGo
 
-func (c capGoStruct) Balance() (float32, error){
-	resp, err := c.Request(BALANCE_URI, &CapSolverRequest{
+
+func (c capGoStruct) Balance() (float32, error) {
+	resp, err := c.Request(BALANCE_PATH, &CapSolverRequest{
 		ClientKey: c.ApiKey,
 	})
-   
-	return resp.Balance, err
+	if err != nil {
+		return 0, err
+	}
+	return resp.Balance, nil
 }

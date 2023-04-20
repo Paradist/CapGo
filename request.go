@@ -27,6 +27,9 @@ func (c capGoStruct) Request(path string, requestBody *CapSolverRequest) (*CapSo
 	if (err != nil) {
 		return nil, err
 	}
+	if response.ErrorId == 1 {
+		return nil, fmt.Errorf("%s: %s", response.ErrorCode, response.ErrorDescription)
+	}
 	
 	return response, nil
 }

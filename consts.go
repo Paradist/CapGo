@@ -50,9 +50,9 @@ var (
 
 const (
 	STATUS_READY    = "ready"
-	CREATE_TASK_URI = "/createTask"
-	GET_TASK_URI    = "/getTaskResult"
-	BALANCE_URI     = "/getBalance"
+	CREATE_TASK_PATH = "/createTask"
+	GET_TASK_PATH   = "/getTaskResult"
+	BALANCE_PATH     = "/getBalance"
 	TASK_TIMEOUT    = 45
 	API_URL			= "https://api.capsolver.com"
 )
