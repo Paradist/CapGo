@@ -22,7 +22,7 @@ go get github.com/paradist/capgo
 
 
 ## Usage
-# Get balance
+### Balance
 ```go
   client := capGo.Client("APIKEY")
   bal, err := client.Balance()
@@ -32,13 +32,13 @@ go get github.com/paradist/capgo
   log.Println(bal)
 ```
 
-# Solve captcha
+### Solve captcha
 ```go
  client := capGo.Client("APIKEY")
  resp, err := client.Solve(map[string]any{
-		        "type":       "ReCaptchaV2taskProxyLess",
-            "websiteURL": "https://www.google.com/recaptcha/api2/demo",
-            "websiteKey": "6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-",
+ 		"type":       "ReCaptchaV2taskProxyLess",
+		"websiteURL": "https://www.google.com/recaptcha/api2/demo",
+		"websiteKey": "6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-",
   })
  if (err != nil) {
     log.Println(err)
@@ -46,7 +46,7 @@ go get github.com/paradist/capgo
  log.Println(resp.Solution.GRecaptchaResponse)
 ```
 
-# Recognition
+### Recognition
 ```go
  client := capGo.Client("APIKEY")
  b, err := os.ReadFile("queue-it.jpg")
@@ -54,9 +54,9 @@ go get github.com/paradist/capgo
     panic(err)
  }
  resp, err := client.Solve(map[string]any{
-		        "type": "ImageToTextTask",
-            "module": "queueit",
-            "body":   base64.StdEncoding.EncodeToString(b),
+		"type": "ImageToTextTask",
+		"module": "queueit",
+		"body":   base64.StdEncoding.EncodeToString(b),
   })
  if (err != nil) {
     log.Println(err)
