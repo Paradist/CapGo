@@ -1,8 +1,8 @@
 package capGo
 
 import (
-	"encoding/json"
 	"fmt"
+	"encoding/json"
 
 	"github.com/go-resty/resty/v2"
 )
@@ -15,17 +15,18 @@ func (c capGoStruct) Request(path string, requestBody *CapSolverRequest) (*CapSo
 		return nil, err
 	}
 
-	resp, err := client.R().SetHeader("Content-Type", "application/json").SetBody(body).Get(fmt.Sprint(API_URL, path))
+	resp, err := client.R().SetHeader("Content-Type", "application/json").SetBody(body).Post(fmt.Sprint(API_URL, path))
 	if (err != nil) {
 		return nil, err
 	}
 
-	responce := &CapSolverResponse{}
-	responce.Solution = &Solution{}
+	response := &CapSolverResponse{}
+	response.Solution = &Solution{}
 
-	err = json.Unmarshal(resp.Body(), responce)
+	err = json.Unmarshal(resp.Body(), response)
 	if (err != nil) {
 		return nil, err
 	}
-	return responce, nil
+	
+	return response, nil
 }
