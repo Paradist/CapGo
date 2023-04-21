@@ -53,11 +53,10 @@ resp, err := client.Solve(map[string]any{
 	"websiteURL": "https://hcaptcha.com/",
 	"websiteKey": "00000000-0000-0000-0000-000000000000",
 })
-if err != nil {
-	log.Fatal(err)
-	return
+if (err != nil) {
+   log.Println(err)
 }
-fmt.Println(resp)
+log.Println(resp)
 ```
 
 ### Recognition
