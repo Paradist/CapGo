@@ -35,28 +35,28 @@ go get github.com/paradist/capgo
 
 ### Solve captcha
 ```go
- client := capGo.Client("APIKEY")
- resp, err := client.Solve(map[string]any{
+  client := capGo.Client("APIKEY")
+  resp, err := client.Solve(map[string]any{
  		"type":       "ReCaptchaV2taskProxyLess",
 		"websiteURL": "https://www.google.com/recaptcha/api2/demo",
 		"websiteKey": "6Le-wvkSAAAAAPBMRTvw0Q4Muexq9bi0DJwx_mJ-",
   })
- if (err != nil) {
+  if (err != nil) {
     log.Println(err)
   }
- log.Println(resp.Solution.GRecaptchaResponse)
+  log.Println(resp.Solution.GRecaptchaResponse)
 ```
 ```go
-client := capGo.Client("APIKEY")
-resp, err := client.Solve(map[string]any{
+ client := capGo.Client("APIKEY")
+ resp, err := client.Solve(map[string]any{
 	"type":       "HCaptchaEnterpriseTaskProxyLess",
 	"websiteURL": "https://hcaptcha.com/",
 	"websiteKey": "00000000-0000-0000-0000-000000000000",
-})
-if (err != nil) {
+ })
+ if (err != nil) {
    log.Println(err)
-}
-log.Println(resp)
+ }
+ log.Println(resp)
 ```
 
 ### Recognition
