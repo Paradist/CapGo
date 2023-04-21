@@ -63,7 +63,7 @@ log.Println(resp)
 ```go
  client := capGo.Client("APIKEY")
  b, err := os.ReadFile("queue-it.jpg")
- if err != nil {
+ if (err != nil) {
     panic(err)
  }
  resp, err := client.Solve(map[string]any{
