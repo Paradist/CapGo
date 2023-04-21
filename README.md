@@ -46,6 +46,19 @@ go get github.com/paradist/capgo
   }
  log.Println(resp.Solution.GRecaptchaResponse)
 ```
+```go
+client := capGo.Client("APIKEY")
+resp, err := client.Solve(map[string]any{
+	"type":       "HCaptchaEnterpriseTaskProxyLess",
+	"websiteURL": "https://hcaptcha.com/",
+	"websiteKey": "00000000-0000-0000-0000-000000000000",
+})
+if err != nil {
+	log.Fatal(err)
+	return
+}
+fmt.Println(resp)
+```
 
 ### Recognition
 ```go
