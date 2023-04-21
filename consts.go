@@ -8,22 +8,21 @@ var (
 		"HCaptchaEnterpriseTask",
 		"HCaptchaEnterpriseTaskProxyLess",
 		"HCaptchaTurboTask",
+		"HCaptchaClassification",
 
 		"FunCaptchaTask",
 		"FunCaptchaTaskProxyLess",
+		"FunCaptchaClassification",
 
 		"GeeTestTask",
 		"GeeTestTaskProxyLess",
 
 		"ReCaptchaV2Task",
 		"ReCaptchaV2TaskProxyLess",
-
 		"ReCaptchaV2EnterpriseTaskProxyLess",
 		"ReCaptchaV2EnterpriseTask",
-
 		"ReCaptchaV3Task",
 		"ReCaptchaV3TaskProxyLess",
-
 		"ReCaptchaV3EnterpriseTask",
 		"ReCaptchaV3EnterpriseTaskProxyLess",
 
@@ -39,10 +38,6 @@ var (
 		"AntiAkamaiBMPTask",
 
 		"ImageToTextTask",
-
-		"HCaptchaClassification",
-
-		"FunCaptchaClassification",
 
 		"AwsWafClassification",
 	}

@@ -19,7 +19,7 @@ func (c capGoStruct) CheckTaskArguments(args map[string]any) (error) {
 		}
 	}
 	if !(validType) {
-		return fmt.Errorf("unsupported type `%s`! %s", captchaType, c.FormattedCaptchaTypes())
+		return fmt.Errorf("unsupported type `%s`! \n%s", captchaType, c.FormattedCaptchaTypes())
 	}
 	if strings.Contains(captchaType, "recaptcha") {
 		if captchaType != "recaptchaclassification" {

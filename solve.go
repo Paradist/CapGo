@@ -1,7 +1,6 @@
 package capGo
 
 import (
-	"log"
 	"time"
 )
 
